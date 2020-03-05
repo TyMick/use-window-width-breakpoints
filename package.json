@@ -16,6 +16,7 @@
     "email": "ty@tymick.me",
     "url": "https://tymick.me"
   },
+  "repository": "github:tywmick/use-media-breakpoints",
   "license": "MIT",
   "dependencies": {
     "react": "^16.13.0"
