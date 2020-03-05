@@ -1,14 +1,14 @@
-"use strict";
-
 import { useState, useEffect } from "react";
 
-const bootstrapBreakpoints: {
+interface Breakpoints {
   xs?: 0;
   sm: number;
   md?: number;
   lg: number;
   xl?: number;
-} = {
+}
+
+const bootstrapBreakpoints: Breakpoints = {
   xs: 0,
   sm: 576,
   md: 768,
@@ -60,12 +60,24 @@ interface BreakpointResults {
       xl?: boolean;
     };
     lg?: {
-      xl?: boolean;
+      xl: boolean;
     };
   };
 }
 
-export default function(breakpoints = bootstrapBreakpoints): BreakpointResults {
+/**
+ * React hook for using screen width breakpoints.
+ * @param {Breakpoints} breakpoints - Set of screen width breakpoints to be used
+ * @param {0} [breakpoints.xs] - Lower bound of extra-small screen widths, in pixels
+ * @param {number} breakpoints.sm - Lower bound of small screen widths, in pixels
+ * @param {number} [breakpoints.md] - Lower bound of medium screen widths, in pixels
+ * @param {number} breakpoints.lg - Lower bound of large screen widths, in pixels
+ * @param {number} [breakpoints.xs] - Lower bound of extra-large screen widths, in pixels
+ * @returns {BreakpointResults} A full set of breakpoint queries and their boolean values
+ */
+function useMediaBreakpoints(
+  breakpoints: Breakpoints = bootstrapBreakpoints
+): BreakpointResults {
   // Validate breakpoint inputs
   // Smallest breakpoint must be 0
   if (!(breakpoints.xs === 0)) {
@@ -184,3 +196,5 @@ export default function(breakpoints = bootstrapBreakpoints): BreakpointResults {
     }
   };
 }
+
+export default useMediaBreakpoints;
