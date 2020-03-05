@@ -1,16 +1,13 @@
 {
   "name": "use-media-breakpoints",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A React hook for using screen width breakpoints.",
-  "main": "useMediaBreakpoints.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "react",
-    "hook",
-    "typescript"
-  ],
   "author": {
     "name": "Ty Mick",
     "email": "ty@tymick.me",
@@ -25,5 +22,16 @@
     "@types/react": "^16.9.23",
     "prettier": "^1.19.1",
     "typescript": "^3.8.3"
-  }
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "media breakpoints",
+    "media queries",
+    "screen width",
+    "screen side",
+    "responsive",
+    "responsive design",
+    "typescript"
+  ]
 }
