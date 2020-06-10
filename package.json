@@ -16,12 +16,12 @@
   "repository": "github:tywmick/use-media-breakpoints",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.13.0"
+    "react": "^16.13.1"
   },
   "devDependencies": {
-    "@types/react": "^16.9.23",
+    "@types/react": "^16.9.36",
     "prettier": "^1.19.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.5"
   },
   "keywords": [
     "react",
