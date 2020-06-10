@@ -1,6 +1,7 @@
 # useMediaBreakpoints
 
 [![npm version](https://img.shields.io/npm/v/@tywmick/use-media-breakpoints.svg)](https://npmjs.org/package/@tywmick/use-media-breakpoints "View this package on npm")
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@tywmick/use-media-breakpoints)](https://npmjs.org/package/@tywmick/use-media-breakpoints "View this package on npm")
 [![MIT license](https://img.shields.io/npm/l/@tywmick/use-media-breakpoints.svg)](/LICENSE.md)
 
 A React hook for using screen width breakpoints.
