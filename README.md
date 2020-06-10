@@ -1,5 +1,8 @@
 # useMediaBreakpoints
 
+[![npm version](https://img.shields.io/npm/v/@tywmick/use-media-breakpoints.svg)](https://npmjs.org/package/@tywmick/use-media-breakpoints "View this package on npm")
+[![MIT license](https://img.shields.io/npm/l/@tywmick/use-media-breakpoints.svg)](/LICENSE.md)
+
 A React hook for using screen width breakpoints.
 
 I essentially wanted to duplicate the logic of [Bootstrap's `media-breakpoint` Sass mixins](https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints) within my React code.
@@ -87,7 +90,7 @@ This hook returns an object containing the boolean results of several media quer
 }
 ```
 
-What's that good for? Say you have a React component you only want to display on `md`-sized screens. Thow this in your JSX:
+What's that good for? Say you have a React component you only want to display on `md`-sized screens. Thow this into your JSX:
 
 ```jsx
 {breakpoint.md && <MyComponent />}
