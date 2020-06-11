@@ -17,7 +17,7 @@ var bootstrapBreakpoints = {
     sm: 576,
     md: 768,
     lg: 992,
-    xl: 1200
+    xl: 1200,
 };
 /**
  * React hook for using screen width breakpoints.
@@ -32,32 +32,32 @@ var bootstrapBreakpoints = {
 function useMediaBreakpoints(breakpoints) {
     if (breakpoints === void 0) { breakpoints = bootstrapBreakpoints; }
     // Validate breakpoint inputs
-    // Smallest breakpoint must be 0
-    if (!(breakpoints.xs === 0)) {
-        if (breakpoints.sm !== 0) {
+    if (breakpoints.sm === undefined)
+        throw new TypeError("sm breakpoint is required.");
+    if (breakpoints.lg === undefined)
+        throw new TypeError("lg breakpoint is required.");
+    if ((breakpoints.xs !== undefined && typeof breakpoints.xs !== "number") ||
+        typeof breakpoints.sm !== "number" ||
+        (breakpoints.md !== undefined && typeof breakpoints.md !== "number") ||
+        typeof breakpoints.lg !== "number" ||
+        (breakpoints.xl !== undefined && typeof breakpoints.xl !== "number"))
+        throw new TypeError("Breakpoints must be numbers.");
+    if (!(breakpoints.xs === 0))
+        if (breakpoints.sm !== 0)
             throw new RangeError("Smallest breakpoint must be 0.");
-        }
-    }
-    // Each breakpoint must be larger than the previous
-    if (breakpoints.xs === 0 && breakpoints.sm <= breakpoints.xs) {
+    if (breakpoints.xs === 0 && breakpoints.sm <= breakpoints.xs)
         throw new RangeError("sm breakpoint must be larger than xs breakpoint.");
-    }
-    if (breakpoints.md) {
-        if (breakpoints.md <= breakpoints.sm) {
+    if (breakpoints.md !== undefined) {
+        if (breakpoints.md <= breakpoints.sm)
             throw new RangeError("md breakpoint must be larger than sm breakpoint.");
-        }
-        if (breakpoints.lg <= breakpoints.md) {
+        if (breakpoints.lg <= breakpoints.md)
             throw new RangeError("lg breakpoint must be larger than md breakpoint.");
-        }
     }
-    else {
-        if (breakpoints.lg <= breakpoints.sm) {
-            throw new RangeError("lg breakpoint must be larger than sm breakpoint.");
-        }
+    else if (breakpoints.lg <= breakpoints.sm) {
+        throw new RangeError("lg breakpoint must be larger than sm breakpoint.");
     }
-    if (breakpoints.xl && breakpoints.xl <= breakpoints.lg) {
+    if (breakpoints.xl !== undefined && breakpoints.xl <= breakpoints.lg)
         throw new RangeError("xl breakpoint must be larger than lg breakpoint.");
-    }
     // Track window width
     var _a = react_1.useState(0), windowWidth = _a[0], setWindowWidth = _a[1];
     react_1.useEffect(function () {
@@ -87,23 +87,23 @@ function useMediaBreakpoints(breakpoints) {
     }
     // Return full set of breakpoint queries
     return __assign(__assign(__assign(__assign(__assign(__assign({}, (breakpoints.xs === 0 && { xs: currentBreakpoint === "xs" })), { sm: currentBreakpoint === "sm" }), (breakpoints.md && { md: currentBreakpoint === "md" })), { lg: currentBreakpoint === "lg" }), (breakpoints.xl && { xl: currentBreakpoint === "xl" })), { only: __assign(__assign(__assign(__assign(__assign({}, (breakpoints.xs === 0 && { xs: currentBreakpoint === "xs" })), { sm: currentBreakpoint === "sm" }), (breakpoints.md && { md: currentBreakpoint === "md" })), { lg: currentBreakpoint === "lg" }), (breakpoints.xl && { xl: currentBreakpoint === "xl" })), up: __assign(__assign(__assign(__assign(__assign({}, (breakpoints.xs === 0 && { xs: true })), { sm: ["sm", "md", "lg", "xl"].includes(currentBreakpoint) }), (breakpoints.md && {
-            md: ["md", "lg", "xl"].includes(currentBreakpoint)
+            md: ["md", "lg", "xl"].includes(currentBreakpoint),
         })), { lg: ["lg", "xl"].includes(currentBreakpoint) }), (breakpoints.xl && { xl: ["xl"].includes(currentBreakpoint) })), down: __assign(__assign(__assign(__assign(__assign({}, (breakpoints.xs === 0 && { xs: ["xs"].includes(currentBreakpoint) })), { sm: ["xs", "sm"].includes(currentBreakpoint) }), (breakpoints.md && {
-            md: ["xs", "sm", "md"].includes(currentBreakpoint)
+            md: ["xs", "sm", "md"].includes(currentBreakpoint),
         })), { lg: ["xs", "sm", "md", "lg"].includes(currentBreakpoint) }), (breakpoints.xl && { xl: true })), between: __assign(__assign(__assign(__assign({}, (breakpoints.xs === 0 && {
             xs: __assign(__assign(__assign({ sm: ["xs", "sm"].includes(currentBreakpoint) }, (breakpoints.md && {
-                md: ["xs", "sm", "md"].includes(currentBreakpoint)
-            })), { lg: ["xs", "sm", "md", "lg"].includes(currentBreakpoint) }), (breakpoints.xl && { xl: true }))
+                md: ["xs", "sm", "md"].includes(currentBreakpoint),
+            })), { lg: ["xs", "sm", "md", "lg"].includes(currentBreakpoint) }), (breakpoints.xl && { xl: true })),
         })), { sm: __assign(__assign(__assign({}, (breakpoints.md && { md: ["sm", "md"].includes(currentBreakpoint) })), { lg: ["sm", "md", "lg"].includes(currentBreakpoint) }), (breakpoints.xl && {
-                xl: ["sm", "md", "lg", "xl"].includes(currentBreakpoint)
+                xl: ["sm", "md", "lg", "xl"].includes(currentBreakpoint),
             })) }), (breakpoints.md && {
             md: __assign({ lg: ["md", "lg"].includes(currentBreakpoint) }, (breakpoints.xl && {
-                xl: ["md", "lg", "xl"].includes(currentBreakpoint)
-            }))
+                xl: ["md", "lg", "xl"].includes(currentBreakpoint),
+            })),
         })), (breakpoints.xl && {
             lg: {
-                xl: ["lg", "xl"].includes(currentBreakpoint)
-            }
+                xl: ["lg", "xl"].includes(currentBreakpoint),
+            },
         })) });
 }
 exports.default = useMediaBreakpoints;
