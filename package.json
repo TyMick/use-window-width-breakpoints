@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": {
     "name": "Ty Mick",
@@ -22,8 +22,16 @@
     "react": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
     "@types/react": "^16.9.36",
+    "babel-jest": "^26.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^26.0.1",
     "prettier": "^1.19.1",
+    "react-dom": "^16.13.1",
     "typescript": "^3.9.5"
   },
   "keywords": [
