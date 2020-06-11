@@ -1,6 +1,6 @@
 {
   "name": "@tywmick/use-media-breakpoints",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React hook for using screen width breakpoints.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
