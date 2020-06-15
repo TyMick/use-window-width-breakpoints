@@ -27,271 +27,281 @@ describe("Valid outputs", () => {
       act(() => {
         resizeWindow(5);
       });
-      expect(getBreakpointResults(component)).toEqual({
-        xs: true,
-        sm: false,
-        md: false,
-        lg: false,
-        xl: false,
-        only: {
+      setTimeout(() => {
+        expect(getBreakpointResults(component)).toEqual({
           xs: true,
           sm: false,
           md: false,
           lg: false,
           xl: false,
-        },
-        up: {
-          xs: true,
-          sm: false,
-          md: false,
-          lg: false,
-          xl: false,
-        },
-        down: {
-          xs: true,
-          sm: true,
-          md: true,
-          lg: true,
-          xl: true,
-        },
-        between: {
-          xs: {
+          only: {
+            xs: true,
+            sm: false,
+            md: false,
+            lg: false,
+            xl: false,
+          },
+          up: {
+            xs: true,
+            sm: false,
+            md: false,
+            lg: false,
+            xl: false,
+          },
+          down: {
+            xs: true,
             sm: true,
             md: true,
             lg: true,
             xl: true,
           },
-          sm: {
-            md: false,
-            lg: false,
-            xl: false,
+          between: {
+            xs: {
+              sm: true,
+              md: true,
+              lg: true,
+              xl: true,
+            },
+            sm: {
+              md: false,
+              lg: false,
+              xl: false,
+            },
+            md: {
+              lg: false,
+              xl: false,
+            },
+            lg: {
+              xl: false,
+            },
           },
-          md: {
-            lg: false,
-            xl: false,
-          },
-          lg: {
-            xl: false,
-          },
-        },
-      });
+        });
+      }, 400);
     });
 
     it("should return the correct media query results for a sm screen", () => {
       act(() => {
         resizeWindow(15);
       });
-      expect(getBreakpointResults(component)).toEqual({
-        xs: false,
-        sm: true,
-        md: false,
-        lg: false,
-        xl: false,
-        only: {
+      setTimeout(() => {
+        expect(getBreakpointResults(component)).toEqual({
           xs: false,
           sm: true,
           md: false,
           lg: false,
           xl: false,
-        },
-        up: {
-          xs: true,
-          sm: true,
-          md: false,
-          lg: false,
-          xl: false,
-        },
-        down: {
-          xs: false,
-          sm: true,
-          md: true,
-          lg: true,
-          xl: true,
-        },
-        between: {
-          xs: {
+          only: {
+            xs: false,
+            sm: true,
+            md: false,
+            lg: false,
+            xl: false,
+          },
+          up: {
+            xs: true,
+            sm: true,
+            md: false,
+            lg: false,
+            xl: false,
+          },
+          down: {
+            xs: false,
             sm: true,
             md: true,
             lg: true,
             xl: true,
           },
-          sm: {
-            md: true,
-            lg: true,
-            xl: true,
+          between: {
+            xs: {
+              sm: true,
+              md: true,
+              lg: true,
+              xl: true,
+            },
+            sm: {
+              md: true,
+              lg: true,
+              xl: true,
+            },
+            md: {
+              lg: false,
+              xl: false,
+            },
+            lg: {
+              xl: false,
+            },
           },
-          md: {
-            lg: false,
-            xl: false,
-          },
-          lg: {
-            xl: false,
-          },
-        },
-      });
+        });
+      }, 400);
     });
 
     it("should return the correct media query results for a md screen", () => {
       act(() => {
         resizeWindow(25);
       });
-      expect(getBreakpointResults(component)).toEqual({
-        xs: false,
-        sm: false,
-        md: true,
-        lg: false,
-        xl: false,
-        only: {
+      setTimeout(() => {
+        expect(getBreakpointResults(component)).toEqual({
           xs: false,
           sm: false,
           md: true,
           lg: false,
           xl: false,
-        },
-        up: {
-          xs: true,
-          sm: true,
-          md: true,
-          lg: false,
-          xl: false,
-        },
-        down: {
-          xs: false,
-          sm: false,
-          md: true,
-          lg: true,
-          xl: true,
-        },
-        between: {
-          xs: {
+          only: {
+            xs: false,
+            sm: false,
+            md: true,
+            lg: false,
+            xl: false,
+          },
+          up: {
+            xs: true,
+            sm: true,
+            md: true,
+            lg: false,
+            xl: false,
+          },
+          down: {
+            xs: false,
             sm: false,
             md: true,
             lg: true,
             xl: true,
           },
-          sm: {
-            md: true,
-            lg: true,
-            xl: true,
+          between: {
+            xs: {
+              sm: false,
+              md: true,
+              lg: true,
+              xl: true,
+            },
+            sm: {
+              md: true,
+              lg: true,
+              xl: true,
+            },
+            md: {
+              lg: true,
+              xl: true,
+            },
+            lg: {
+              xl: false,
+            },
           },
-          md: {
-            lg: true,
-            xl: true,
-          },
-          lg: {
-            xl: false,
-          },
-        },
-      });
+        });
+      }, 400);
     });
 
     it("should return the correct media query results for a lg screen", () => {
       act(() => {
         resizeWindow(35);
       });
-      expect(getBreakpointResults(component)).toEqual({
-        xs: false,
-        sm: false,
-        md: false,
-        lg: true,
-        xl: false,
-        only: {
+      setTimeout(() => {
+        expect(getBreakpointResults(component)).toEqual({
           xs: false,
           sm: false,
           md: false,
           lg: true,
           xl: false,
-        },
-        up: {
-          xs: true,
-          sm: true,
-          md: true,
-          lg: true,
-          xl: false,
-        },
-        down: {
-          xs: false,
-          sm: false,
-          md: false,
-          lg: true,
-          xl: true,
-        },
-        between: {
-          xs: {
+          only: {
+            xs: false,
+            sm: false,
+            md: false,
+            lg: true,
+            xl: false,
+          },
+          up: {
+            xs: true,
+            sm: true,
+            md: true,
+            lg: true,
+            xl: false,
+          },
+          down: {
+            xs: false,
             sm: false,
             md: false,
             lg: true,
             xl: true,
           },
-          sm: {
-            md: false,
-            lg: true,
-            xl: true,
+          between: {
+            xs: {
+              sm: false,
+              md: false,
+              lg: true,
+              xl: true,
+            },
+            sm: {
+              md: false,
+              lg: true,
+              xl: true,
+            },
+            md: {
+              lg: true,
+              xl: true,
+            },
+            lg: {
+              xl: true,
+            },
           },
-          md: {
-            lg: true,
-            xl: true,
-          },
-          lg: {
-            xl: true,
-          },
-        },
-      });
+        });
+      }, 400);
     });
 
     it("should return the correct media query results for a xl screen", () => {
       act(() => {
         resizeWindow(45);
       });
-      expect(getBreakpointResults(component)).toEqual({
-        xs: false,
-        sm: false,
-        md: false,
-        lg: false,
-        xl: true,
-        only: {
+      setTimeout(() => {
+        expect(getBreakpointResults(component)).toEqual({
           xs: false,
           sm: false,
           md: false,
           lg: false,
           xl: true,
-        },
-        up: {
-          xs: true,
-          sm: true,
-          md: true,
-          lg: true,
-          xl: true,
-        },
-        down: {
-          xs: false,
-          sm: false,
-          md: false,
-          lg: false,
-          xl: true,
-        },
-        between: {
-          xs: {
+          only: {
+            xs: false,
             sm: false,
             md: false,
             lg: false,
             xl: true,
           },
-          sm: {
+          up: {
+            xs: true,
+            sm: true,
+            md: true,
+            lg: true,
+            xl: true,
+          },
+          down: {
+            xs: false,
+            sm: false,
             md: false,
             lg: false,
             xl: true,
           },
-          md: {
-            lg: false,
-            xl: true,
+          between: {
+            xs: {
+              sm: false,
+              md: false,
+              lg: false,
+              xl: true,
+            },
+            sm: {
+              md: false,
+              lg: false,
+              xl: true,
+            },
+            md: {
+              lg: false,
+              xl: true,
+            },
+            lg: {
+              xl: true,
+            },
           },
-          lg: {
-            xl: true,
-          },
-        },
+        });
       });
-    });
+    }, 400);
   });
 
   describe("Two breakpoints", () => {
@@ -305,54 +315,58 @@ describe("Valid outputs", () => {
       act(() => {
         resizeWindow(15);
       });
-      expect(getBreakpointResults(component)).toEqual({
-        sm: true,
-        lg: false,
-        only: {
+      setTimeout(() => {
+        expect(getBreakpointResults(component)).toEqual({
           sm: true,
           lg: false,
-        },
-        up: {
-          sm: true,
-          lg: false,
-        },
-        down: {
-          sm: true,
-          lg: true,
-        },
-        between: {
-          sm: {
+          only: {
+            sm: true,
+            lg: false,
+          },
+          up: {
+            sm: true,
+            lg: false,
+          },
+          down: {
+            sm: true,
             lg: true,
           },
-        },
-      });
+          between: {
+            sm: {
+              lg: true,
+            },
+          },
+        });
+      }, 400);
     });
 
     it("should return the correct media query results for a lg screen", () => {
       act(() => {
         resizeWindow(35);
       });
-      expect(getBreakpointResults(component)).toEqual({
-        sm: false,
-        lg: true,
-        only: {
+      setTimeout(() => {
+        expect(getBreakpointResults(component)).toEqual({
           sm: false,
           lg: true,
-        },
-        up: {
-          sm: true,
-          lg: true,
-        },
-        down: {
-          sm: false,
-          lg: true,
-        },
-        between: {
-          sm: {
+          only: {
+            sm: false,
             lg: true,
           },
-        },
+          up: {
+            sm: true,
+            lg: true,
+          },
+          down: {
+            sm: false,
+            lg: true,
+          },
+          between: {
+            sm: {
+              lg: true,
+            },
+          },
+        });
       });
-    });
+    }, 400);
   });
 });

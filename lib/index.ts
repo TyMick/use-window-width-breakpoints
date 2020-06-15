@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import debounce from "lodash.debounce";
 
 interface Breakpoints {
   xs?: 0;
@@ -117,8 +118,10 @@ export default function useWindowWidthBreakpoints(
       setWindowWidth(window.innerWidth);
     };
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener("resize", debounce(handleResize, 400));
+    return () => {
+      window.removeEventListener("resize", debounce(handleResize, 400));
+    };
   }, []);
 
   // Determine current breakpoint

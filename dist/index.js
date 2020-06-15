@@ -10,8 +10,12 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = require("react");
+var lodash_debounce_1 = __importDefault(require("lodash.debounce"));
 var bootstrapBreakpoints = {
     xs: 0,
     sm: 576,
@@ -65,8 +69,10 @@ function useWindowWidthBreakpoints(breakpoints) {
             setWindowWidth(window.innerWidth);
         };
         handleResize();
-        window.addEventListener("resize", handleResize);
-        return function () { return window.removeEventListener("resize", handleResize); };
+        window.addEventListener("resize", lodash_debounce_1.default(handleResize, 400));
+        return function () {
+            window.removeEventListener("resize", lodash_debounce_1.default(handleResize, 400));
+        };
     }, []);
     // Determine current breakpoint
     var currentBreakpoint;

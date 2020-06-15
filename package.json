@@ -21,6 +21,9 @@
   },
   "repository": "github:tywmick/use-window-width-breakpoints",
   "license": "MIT",
+  "dependencies": {
+    "lodash.debounce": "^4.0.8"
+  },
   "peerDependencies": {
     "react": "^16.8.0"
   },
@@ -28,6 +31,7 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
+    "@types/lodash.debounce": "^4.0.6",
     "@types/react": "^16.9.36",
     "babel-jest": "^26.0.1",
     "enzyme": "^3.11.0",
