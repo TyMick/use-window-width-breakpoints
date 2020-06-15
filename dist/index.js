@@ -25,7 +25,7 @@ var bootstrapBreakpoints = {
 };
 /**
  * React hook for using window width breakpoints.
- * @param {Breakpoints} breakpoints - Set of window width breakpoints to be used
+ * @param {Breakpoints} [breakpoints] - Set of window width breakpoints to be used
  * @param {0} [breakpoints.xs] - Lower bound of extra-small window widths, in pixels
  * @param {number} breakpoints.sm - Lower bound of small window widths, in pixels
  * @param {number} [breakpoints.md] - Lower bound of medium window widths, in pixels
