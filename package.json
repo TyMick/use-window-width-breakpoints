@@ -1,7 +1,7 @@
 {
-  "name": "@tywmick/use-media-breakpoints",
+  "name": "use-window-width-breakpoints",
   "version": "1.0.2",
-  "description": "A React hook for using screen width breakpoints.",
+  "description": "A React hook for using window width breakpoints.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -19,7 +19,7 @@
     "email": "ty@tymick.me",
     "url": "https://tymick.me"
   },
-  "repository": "github:tywmick/use-media-breakpoints",
+  "repository": "github:tywmick/use-window-width-breakpoints",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.8.0"

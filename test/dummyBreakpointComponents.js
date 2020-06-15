@@ -1,5 +1,5 @@
 import React from "react";
-import useMediaBreakpoints from "../dist/index";
+import useWindowWidthBreakpoints from "../dist/index";
 import Enzyme, { shallow, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 function makeDummyBreakpointComponent(breakpoints) {
   return function DummyBreakpointComponent() {
-    const breakpoint = useMediaBreakpoints(breakpoints);
+    const breakpoint = useWindowWidthBreakpoints(breakpoints);
     return <div>{JSON.stringify(breakpoint)}</div>;
   };
 }

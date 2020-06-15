@@ -54,14 +54,14 @@ interface BreakpointResults {
     };
 }
 /**
- * React hook for using screen width breakpoints.
- * @param {Breakpoints} breakpoints - Set of screen width breakpoints to be used
- * @param {0} [breakpoints.xs] - Lower bound of extra-small screen widths, in pixels
- * @param {number} breakpoints.sm - Lower bound of small screen widths, in pixels
- * @param {number} [breakpoints.md] - Lower bound of medium screen widths, in pixels
- * @param {number} breakpoints.lg - Lower bound of large screen widths, in pixels
- * @param {number} [breakpoints.xs] - Lower bound of extra-large screen widths, in pixels
+ * React hook for using window width breakpoints.
+ * @param {Breakpoints} breakpoints - Set of window width breakpoints to be used
+ * @param {0} [breakpoints.xs] - Lower bound of extra-small window widths, in pixels
+ * @param {number} breakpoints.sm - Lower bound of small window widths, in pixels
+ * @param {number} [breakpoints.md] - Lower bound of medium window widths, in pixels
+ * @param {number} breakpoints.lg - Lower bound of large window widths, in pixels
+ * @param {number} [breakpoints.xs] - Lower bound of extra-large window widths, in pixels
  * @returns {BreakpointResults} A full set of breakpoint queries and their boolean values
  */
-declare function useMediaBreakpoints(breakpoints?: Breakpoints): BreakpointResults;
-export default useMediaBreakpoints;
+export default function useWindowWidthBreakpoints(breakpoints?: Breakpoints): BreakpointResults;
+export {};
