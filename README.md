@@ -1,8 +1,9 @@
 # useWindowWidthBreakpoints
 
-[![npm version](https://img.shields.io/npm/v/use-window-width-breakpoints.svg)](https://npmjs.org/package/use-window-width-breakpoints "View this package on npm")
+[![npm](https://img.shields.io/npm/v/use-window-width-breakpoints)](https://npmjs.org/package/use-window-width-breakpoints "View this package on npm")
 [![npm bundle size](https://img.shields.io/bundlephobia/min/use-window-width-breakpoints)](https://npmjs.org/package/use-window-width-breakpoints "View this package on npm")
-[![MIT license](https://img.shields.io/npm/l/use-window-width-breakpoints.svg)](/LICENSE.md)
+[![npm downloads](https://img.shields.io/npm/dw/use-window-width-breakpoints)](https//npmjs.org/package/use-window-width-breakpoints "View this package on npm")
+[![NPM](https://img.shields.io/npm/l/use-window-width-breakpoints)](/LICENSE.md)
 
 A React hook for using window width breakpoints.
 
