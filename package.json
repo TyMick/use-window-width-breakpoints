@@ -1,6 +1,6 @@
 {
   "name": "use-window-width-breakpoints",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A React hook for using window width breakpoints.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
