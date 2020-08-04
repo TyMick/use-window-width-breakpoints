@@ -20,7 +20,7 @@
     "url": "https://tymick.me"
   },
   "repository": "github:tywmick/use-window-width-breakpoints",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "lodash.debounce": "^4.0.8"
   },
