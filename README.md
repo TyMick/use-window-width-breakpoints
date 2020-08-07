@@ -6,13 +6,13 @@
 [![npm license](https://img.shields.io/npm/l/use-window-width-breakpoints)](/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0-ff69b4.svg)](/CODE_OF_CONDUCT.md)
 
+> 1. **[Installation](#installation)**
+> 2. **[Usage](#usage)**
+> 3. **[Related projects](#related-projects)**
+
 A React hook for using window width breakpoints.
 
 I essentially wanted to duplicate the logic of [Bootstrap's `media-breakpoint` Sass mixins](https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints) within my React code.
-
-> - **[Installation](#installation)**
-> - **[Usage](#usage)**
-> - **[Related projects](#related-projects)**
 
 <h2 id="installation">Installation</h2>
 
