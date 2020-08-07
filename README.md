@@ -10,11 +10,9 @@ A React hook for using window width breakpoints.
 
 I essentially wanted to duplicate the logic of [Bootstrap's `media-breakpoint` Sass mixins](https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints) within my React code.
 
------
-
-- **[Installation](#installation)**
-- **[Usage](#usage)**
-- **[Related projects](#related-projects)**
+> - **[Installation](#installation)**
+> - **[Usage](#usage)**
+> - **[Related projects](#related-projects)**
 
 <h2 id="installation">Installation</h2>
 
