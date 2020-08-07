@@ -6,11 +6,9 @@
 [![npm license](https://img.shields.io/npm/l/use-window-width-breakpoints)](/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0-ff69b4.svg)](/CODE_OF_CONDUCT.md)
 
-<b><ol>
-  <li><a href="#installation">Installation</a></li>
-  <li><a href="#usage">Usage</a></li>
-  <li><a href="#related-projects">Related projects</a></li>
-</ol></b>
+> 1. **[Installation](#installation)**
+> 2. **[Usage](#usage)**
+> 3. **[Related projects](#related-projects)**
 
 A React hook for using window width breakpoints.
 
