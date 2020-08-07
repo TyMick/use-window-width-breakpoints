@@ -6,11 +6,17 @@
 [![npm license](https://img.shields.io/npm/l/use-window-width-breakpoints)](/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0-ff69b4.svg)](/CODE_OF_CONDUCT.md)
 
+<b><ol>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#related-projects">Related projects</a></li>
+</ol></b>
+
 A React hook for using window width breakpoints.
 
 I essentially wanted to duplicate the logic of [Bootstrap's `media-breakpoint` Sass mixins](https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints) within my React code.
 
-## Installation
+<h2 id="installation">Installation</h2>
 
 ```sh
 npm install use-window-width-breakpoints
@@ -18,7 +24,7 @@ npm install use-window-width-breakpoints
 yarn add use-window-width-breakpoints
 ```
 
-## Usage
+<h2 id="usage">Usage</h2>
 
 After importing the hook...
 
@@ -119,3 +125,7 @@ Or maybe you want to describe the size of the window in paragraph form with an o
 But that's up to you.
 
 Have fun!
+
+<h2 id="related-projects">Related projects</h2>
+
+- [useWindowOrientation](https://github.com/tywmick/use-window-orientation)
