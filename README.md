@@ -1,8 +1,8 @@
 # useWindowWidthBreakpoints
 
-[![npm version](https://img.shields.io/npm/v/use-window-width-breakpoints)](https://npmjs.org/package/use-window-width-breakpoints "View this package on npm")
-[![npm peer dependency version](https://img.shields.io/npm/dependency-version/use-window-width-breakpoints/peer/react)](https://npmjs.org/package/use-window-width-breakpoints "View this package on npm")
-[![npm bundle size](https://img.shields.io/bundlephobia/min/use-window-width-breakpoints)](https://npmjs.org/package/use-window-width-breakpoints "View this package on npm")
+[![npm version](https://img.shields.io/npm/v/use-window-width-breakpoints)](https://www.npmjs.com/package/use-window-width-breakpoints "View this package on npm")
+[![npm peer dependency version](https://img.shields.io/npm/dependency-version/use-window-width-breakpoints/peer/react)](https://www.npmjs.com/package/use-window-width-breakpoints "View this package on npm")
+[![npm bundle size](https://img.shields.io/bundlephobia/min/use-window-width-breakpoints)](https://www.npmjs.com/package/use-window-width-breakpoints "View this package on npm")
 [![npm license](https://img.shields.io/npm/l/use-window-width-breakpoints)](/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0-ff69b4.svg)](/CODE_OF_CONDUCT.md)
 
