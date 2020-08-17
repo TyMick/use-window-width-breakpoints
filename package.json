@@ -2,6 +2,9 @@
   "name": "use-window-width-breakpoints",
   "version": "1.0.9",
   "description": "A React hook for using window width breakpoints.",
+  "author": "Ty Mick <ty@tymick.me> (https://tymick.me)",
+  "repository": "github:tywmick/use-window-width-breakpoints",
+  "license": "Apache-2.0",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
@@ -16,18 +19,11 @@
     "dev": "microbundle watch",
     "test": "npm run build && jest --verbose"
   },
-  "author": {
-    "name": "Ty Mick",
-    "email": "ty@tymick.me",
-    "url": "https://tymick.me"
-  },
-  "repository": "github:tywmick/use-window-width-breakpoints",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "lodash.debounce": "^4.0.8"
-  },
   "peerDependencies": {
     "react": "^16.8.0"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -57,5 +53,8 @@
     "responsive",
     "responsive design",
     "typescript"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/tywmick/use-window-width-breakpoints/issues"
+  }
 }
