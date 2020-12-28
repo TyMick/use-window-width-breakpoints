@@ -3,7 +3,7 @@
   "version": "1.0.9",
   "description": "A React hook for using window width breakpoints.",
   "author": "Ty Mick <ty@tymick.me> (https://tymick.me)",
-  "repository": "github:tywmick/use-window-width-breakpoints",
+  "repository": "https://github.com/tywmick/use-window-width-breakpoints.git",
   "license": "Apache-2.0",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -18,6 +18,9 @@
     "build": "microbundle",
     "dev": "microbundle watch",
     "test": "npm run build && jest --verbose"
+  },
+  "np": {
+    "yarn": false
   },
   "peerDependencies": {
     "react": ">=16.8.0"
