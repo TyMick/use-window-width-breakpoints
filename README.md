@@ -150,8 +150,6 @@ If you'd like to contribute to this project (which would be awesome), here's how
    npm install
    ```
 
-   - Don't worry about the [high security vulnerability](https://github.com/developit/microbundle/issues/695) in `serialize-javascript` that npm brings up—the vulnerable code [isn't used by Microbundle](https://github.com/developit/microbundle/issues/695#issuecomment-672773094).
-
 Now, you can build the package with `npm run build`, build _and_ watch for changes with `npm run dev` (automatically rebuilding on each change in the source), and run the test suite with `npm run test`.
 
 After building the package, you can test it in another project on your machine by [adding the local path](https://docs.npmjs.com/files/package.json#local-paths) as a dependency (e.g., by running `npm install /path/to/local/use-window-width-breakpoints` in that other project).
