@@ -17,13 +17,16 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "npm run build && jest --verbose"
+    "test": "jest --verbose"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "np": {
     "yarn": false
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=16.9.0"
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8"
@@ -31,12 +34,13 @@
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
-    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/react-hooks": "^7.0.0",
+    "@types/jest": "^26.0.23",
     "@types/lodash.debounce": "^4.0.6",
     "@types/react": "^17.0.9",
     "babel-jest": "^27.0.2",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "jest": "^27.0.4",
     "microbundle": "^0.13.1",
     "prettier": "^2.3.1",

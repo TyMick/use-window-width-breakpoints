@@ -114,13 +114,17 @@ export default function useWindowWidthBreakpoints(
   // Track window width
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+    const handleResize = debounce(
+      () => setWindowWidth(window.innerWidth),
+      400,
+      { leading: true, trailing: true }
+    );
     handleResize();
-    window.addEventListener("resize", debounce(handleResize, 400));
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      window.removeEventListener("resize", debounce(handleResize, 400));
+      window.removeEventListener("resize", handleResize);
+      handleResize.cancel();
     };
   }, []);
 

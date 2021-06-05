@@ -1,34 +1,24 @@
-import {
-  mountDummyBreakpointComponent,
-  getBreakpointResults,
-} from "./dummyBreakpointComponents";
-import { act } from "react-dom/test-utils";
+import { act, renderHook } from "@testing-library/react-hooks";
+import { waitFor } from "@testing-library/react";
+import useWindowWidthBreakpoints from "../index";
 
-function resizeWindow(newWidth) {
-  window.innerWidth = newWidth;
-  window.dispatchEvent(new Event("resize"));
+function resizeWindow(newWidth: number) {
+  act(() => {
+    // @ts-ignore (innerWidth is writable in this test environment)
+    window.innerWidth = newWidth;
+    window.dispatchEvent(new Event("resize"));
+  });
 }
 
 describe("Valid outputs", () => {
   describe("Five breakpoints", () => {
-    let component;
-
-    beforeAll(() => {
-      component = mountDummyBreakpointComponent({
-        xs: 0,
-        sm: 10,
-        md: 20,
-        lg: 30,
-        xl: 40,
-      });
-    });
-
-    it("should return the correct media query results for a xs screen", () => {
-      act(() => {
-        resizeWindow(5);
-      });
-      setTimeout(() => {
-        expect(getBreakpointResults(component)).toEqual({
+    it("should return the correct media query results for a xs screen", async () => {
+      const { result } = renderHook(() =>
+        useWindowWidthBreakpoints({ xs: 0, sm: 10, md: 20, lg: 30, xl: 40 })
+      );
+      resizeWindow(5);
+      await waitFor(() =>
+        expect(result.current).toEqual({
           xs: true,
           sm: false,
           md: false,
@@ -75,16 +65,17 @@ describe("Valid outputs", () => {
               xl: false,
             },
           },
-        });
-      }, 400);
+        })
+      );
     });
 
-    it("should return the correct media query results for a sm screen", () => {
-      act(() => {
-        resizeWindow(15);
-      });
-      setTimeout(() => {
-        expect(getBreakpointResults(component)).toEqual({
+    it("should return the correct media query results for a sm screen", async () => {
+      const { result } = renderHook(() =>
+        useWindowWidthBreakpoints({ xs: 0, sm: 10, md: 20, lg: 30, xl: 40 })
+      );
+      resizeWindow(15);
+      await waitFor(() =>
+        expect(result.current).toEqual({
           xs: false,
           sm: true,
           md: false,
@@ -131,16 +122,17 @@ describe("Valid outputs", () => {
               xl: false,
             },
           },
-        });
-      }, 400);
+        })
+      );
     });
 
-    it("should return the correct media query results for a md screen", () => {
-      act(() => {
-        resizeWindow(25);
-      });
-      setTimeout(() => {
-        expect(getBreakpointResults(component)).toEqual({
+    it("should return the correct media query results for a md screen", async () => {
+      const { result } = renderHook(() =>
+        useWindowWidthBreakpoints({ xs: 0, sm: 10, md: 20, lg: 30, xl: 40 })
+      );
+      resizeWindow(25);
+      await waitFor(() =>
+        expect(result.current).toEqual({
           xs: false,
           sm: false,
           md: true,
@@ -187,16 +179,17 @@ describe("Valid outputs", () => {
               xl: false,
             },
           },
-        });
-      }, 400);
+        })
+      );
     });
 
-    it("should return the correct media query results for a lg screen", () => {
-      act(() => {
-        resizeWindow(35);
-      });
-      setTimeout(() => {
-        expect(getBreakpointResults(component)).toEqual({
+    it("should return the correct media query results for a lg screen", async () => {
+      const { result } = renderHook(() =>
+        useWindowWidthBreakpoints({ xs: 0, sm: 10, md: 20, lg: 30, xl: 40 })
+      );
+      resizeWindow(35);
+      await waitFor(() =>
+        expect(result.current).toEqual({
           xs: false,
           sm: false,
           md: false,
@@ -243,16 +236,17 @@ describe("Valid outputs", () => {
               xl: true,
             },
           },
-        });
-      }, 400);
+        })
+      );
     });
 
-    it("should return the correct media query results for a xl screen", () => {
-      act(() => {
-        resizeWindow(45);
-      });
-      setTimeout(() => {
-        expect(getBreakpointResults(component)).toEqual({
+    it("should return the correct media query results for a xl screen", async () => {
+      const { result } = renderHook(() =>
+        useWindowWidthBreakpoints({ xs: 0, sm: 10, md: 20, lg: 30, xl: 40 })
+      );
+      resizeWindow(45);
+      await waitFor(() =>
+        expect(result.current).toEqual({
           xs: false,
           sm: false,
           md: false,
@@ -299,24 +293,19 @@ describe("Valid outputs", () => {
               xl: true,
             },
           },
-        });
-      });
-    }, 400);
+        })
+      );
+    });
   });
 
   describe("Two breakpoints", () => {
-    let component;
-
-    beforeAll(() => {
-      component = mountDummyBreakpointComponent({ sm: 0, lg: 30 });
-    });
-
-    it("should return the correct media query results for a sm screen", () => {
-      act(() => {
-        resizeWindow(15);
-      });
-      setTimeout(() => {
-        expect(getBreakpointResults(component)).toEqual({
+    it("should return the correct media query results for a sm screen", async () => {
+      const { result } = renderHook(() =>
+        useWindowWidthBreakpoints({ sm: 0, lg: 30 })
+      );
+      resizeWindow(15);
+      await waitFor(() =>
+        expect(result.current).toEqual({
           sm: true,
           lg: false,
           only: {
@@ -336,16 +325,17 @@ describe("Valid outputs", () => {
               lg: true,
             },
           },
-        });
-      }, 400);
+        })
+      );
     });
 
-    it("should return the correct media query results for a lg screen", () => {
-      act(() => {
-        resizeWindow(35);
-      });
-      setTimeout(() => {
-        expect(getBreakpointResults(component)).toEqual({
+    it("should return the correct media query results for a lg screen", async () => {
+      const { result } = renderHook(() =>
+        useWindowWidthBreakpoints({ sm: 0, lg: 30 })
+      );
+      resizeWindow(35);
+      await waitFor(() =>
+        expect(result.current).toEqual({
           sm: false,
           lg: true,
           only: {
@@ -365,8 +355,8 @@ describe("Valid outputs", () => {
               lg: true,
             },
           },
-        });
-      });
-    }, 400);
+        })
+      );
+    });
   });
 });
