@@ -98,7 +98,7 @@ This hook returns an object containing the boolean results of several media quer
 }
 ```
 
-What's that good for? Say you have a React component you only want to display on `md`-sized screens. Thow this into your JSX:
+What's that good for? Say you have a React component you only want to display on `md`-sized screens. Throw this into your JSX:
 
 ```jsx
 {breakpoint.md && <MyComponent />}
@@ -127,30 +127,15 @@ Have fun!
 
 <h2 id="contributing">Contributing</h2>
 
-If you'd like to contribute to this project (which would be awesome), here's how to set it up:
+If you'd like to contribute to this project (which would be awesome), the easiest way to set it up would be to install the [GitHub CLI](https://cli.github.com/) and the run the following:
 
-1. [Fork this repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) to your own GitHub account.
+```sh
+gh repo fork tywmick/use-window-width-breakpoints --clone=true
+cd use-window-width-breakpoints
+npm install
+```
 
-2. Clone it to your device.
-
-   ```sh
-   git clone https://github.com/YOUR_USERNAME/use-window-width-breakpoints.git
-   ```
-
-3. Add this repository as a remote, so you can pull upstream changes in the future with `git pull upstream master`.
-
-   ```sh
-   cd use-window-width-breakpoints
-   git remote add upstream https://github.com/tywmick/use-window-width-breakpoints.git
-   ```
-
-4. Install dependencies.
-
-   ```sh
-   npm install
-   ```
-
-Now, you can build the package with `npm run build`, build _and_ watch for changes with `npm run dev` (automatically rebuilding on each change in the source), and run the test suite with `npm run test`.
+Now, you can build the package with `npm run build`, build _and_ watch for changes with `npm run dev` (automatically rebuilding on each change in the source), run the test suite with `npm run test`, and create pull requests with [`gh pr create`](https://cli.github.com/manual/gh_pr_create).
 
 After building the package, you can test it in another project on your machine by [adding the local path](https://docs.npmjs.com/files/package.json#local-paths) as a dependency (e.g., by running `npm install /path/to/local/use-window-width-breakpoints` in that other project).
 
