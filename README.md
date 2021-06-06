@@ -127,7 +127,7 @@ Have fun!
 
 <h2 id="contributing">Contributing</h2>
 
-If you'd like to contribute to this project (which would be awesome), the easiest way to set it up would be to install the [GitHub CLI](https://cli.github.com/) and the run the following:
+If you'd like to contribute to this project (which would be awesome), the easiest way to set it up would be to install the [GitHub CLI](https://cli.github.com/) and then run the following:
 
 ```sh
 gh repo fork tywmick/use-window-width-breakpoints --clone=true
