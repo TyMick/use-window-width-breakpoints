@@ -17,7 +17,8 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "version": "npm run build"
   },
   "jest": {
     "testEnvironment": "jsdom"
