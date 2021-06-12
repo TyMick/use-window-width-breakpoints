@@ -18,7 +18,8 @@
     "build": "microbundle",
     "dev": "microbundle watch",
     "test": "jest --verbose",
-    "version": "npm run build && git add dist"
+    "version": "npm run build && git add dist",
+    "postpublish": "npm pack && open ."
   },
   "jest": {
     "testEnvironment": "jsdom"
