@@ -27,7 +27,7 @@
     "yarn": false
   },
   "peerDependencies": {
-    "react": ">=16.9.0"
+    "react": ">=16.8.0"
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8"
